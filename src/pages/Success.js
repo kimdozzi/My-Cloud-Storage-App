@@ -42,8 +42,8 @@ const Success = () => {
 
           // 토큰이 존재할 경우 로컬 스토리지에 저장
           if (accessToken) {
-            localStorage.setItem("accessToken", accessToken);
-            localStorage.setItem("refreshToken", refreshToken);
+            localStorage.setItem("access", accessToken);
+            localStorage.setItem("refresh", refreshToken);
 
             // 사용자 정보를 상태로 설정
             const userData = response.data;
