@@ -32,6 +32,7 @@ const Success = () => {
             headers: {
               refresh: `${refreshToken}`,
             },
+            withCredentials: true,
           }
         )
         .then((response) => {
@@ -39,6 +40,7 @@ const Success = () => {
 
           // 서버 응답 헤더에서 access와 refresh 토큰 가져오기
           const accessToken = response.headers["access"];
+          console.log(accessToken);
 
           // 토큰이 존재할 경우 로컬 스토리지에 저장
           if (accessToken) {
